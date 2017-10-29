@@ -1,3 +1,0 @@
-script.engine.groovy.inline.aggs: true
-script.engine.groovy.inline.search: true
-network.host: 0.0.0.0
