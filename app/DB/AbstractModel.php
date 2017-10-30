@@ -43,7 +43,7 @@ abstract class AbstractModel
      */
     public function select($data)
     {
-        $selector = new SelectBuilder($this->connection, $this->table);
+        $selector = new SelectBuilder($this->connection, $this->getTable());
         $selector->select($data);
 
         return $selector;
@@ -55,7 +55,7 @@ abstract class AbstractModel
      */
     public function update($data)
     {
-        $updater = new CommandBuilder($this->connection, $this->table);
+        $updater = new CommandBuilder($this->connection, $this->getTable());
         $updater->update($data);
 
         return $updater;
@@ -67,12 +67,13 @@ abstract class AbstractModel
      */
     public function delete($data)
     {
-        $deleting = new CommandBuilder($this->connection, $this->table);
+        $deleting = new CommandBuilder($this->connection, $this->getTable());
         $deleting->delete($data);
 
         return $deleting;
     }
 
+    abstract public function getTable(): string;
     /**
      * @param array $data
      */
