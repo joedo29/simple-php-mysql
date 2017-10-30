@@ -2,6 +2,7 @@
 
 namespace Tests\Unit\DB\Grammar;
 
+use App\DB\Connector\Connection;
 use App\DB\Grammar\SelectBuilder;
 
 /**
@@ -20,7 +21,8 @@ class SelectBuilderTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->builder = new SelectBuilder($this->table);
+        $connection = $this->createMock(Connection::class);
+        $this->builder = new SelectBuilder($connection, $this->table);
     }
 
     /**
