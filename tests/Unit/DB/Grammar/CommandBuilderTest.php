@@ -2,6 +2,7 @@
 
 namespace Tests\Unit\DB\Grammar;
 
+use App\DB\Connector\Connection;
 use App\DB\Grammar\CommandBuilder;
 
 /**
@@ -19,8 +20,8 @@ class CommandBuilderTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-
-        $this->builder = new CommandBuilder($this->table);
+        $connection = $this->createMock(Connection::class);
+        $this->builder = new CommandBuilder($connection, $this->table);
     }
 
     /**

@@ -4,6 +4,7 @@ namespace App\DB;
 
 use App\DB\Connector\Connection;
 use App\DB\Grammar\CommandBuilder;
+use App\DB\Grammar\InsertBuilder;
 use App\DB\Grammar\SelectBuilder;
 
 /**
@@ -16,6 +17,16 @@ abstract class AbstractModel
      * @var Connection
      */
     private $connection;
+
+    /**
+     * @var array
+     */
+    private $attributes = [];
+
+    /**
+     * @var string
+     */
+    protected $table;
 
     /**
      * AbstractModel constructor.
@@ -63,4 +74,13 @@ abstract class AbstractModel
     }
 
     abstract public function getTable(): string;
+    /**
+     * @param array $data
+     */
+    public function insert(array $data)
+    {
+        $insert = new InsertBuilder($this->connection, $this->table);
+        $insert->insert($data);
+        $insert->execute();
+    }
 }
