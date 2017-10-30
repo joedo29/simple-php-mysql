@@ -31,7 +31,7 @@ services:
     mariadb:
         image: mariadb:latest
         ports:
-            - "3306:3306"
+            - "3308:3306"
         volumes_from:
             - sources
         networks:
@@ -54,6 +54,6 @@ services:
             - php
             - sources
         ports:
-            - "80:88"
+            - "88:88"
         environment:
             NGINX_HOST: lumen.local

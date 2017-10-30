@@ -104,6 +104,7 @@ abstract class AbstractBuilder
      */
     public function getResults()
     {
+       // print_r($this->getQuery());
         return $this->connection->query($this->getQuery());
     }
 
