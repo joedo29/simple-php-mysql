@@ -109,6 +109,14 @@ abstract class AbstractBuilder
     }
 
     /**
+     * Exec query
+     */
+    public function execute()
+    {
+        $this->connection->exec($this->getQuery());
+    }
+
+    /**
      * @return string
      */
     abstract public function getQuery(): string;

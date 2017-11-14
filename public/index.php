@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        /*table, th, td {*/
+            /*border: 1px solid black;*/
+            /*border-collapse: collapse;*/
+        /*}*/
+        /*th, td {*/
+            /*padding: 5px;*/
+            /*text-align: left;*/
+        /*}*/
+        table#t01 {
+            width: 20%;
+            background-color: #f1f1c1;
+        }
+        th {
+            text-align: left;
+        }
+    </style>
 </head>
 <body style="background-color:powderblue;">
+
+
+<!--Begin writing table to filter Sailor by rating-->
+
 <form action="/" method="post">
     <table border="0">
         <center><h1> Sailors - Reserves - Boats </h1></center>
@@ -20,10 +41,9 @@
     </table>
 
     <?php
+    $app = require __DIR__.'/../bootstrap/app.php';
 
     $rating = $_POST['rating'];
-    $age = $_POST['age'];
-    $app = require __DIR__.'/../bootstrap/app.php';
 
     $connection = new \App\DB\Connector\Connection('mariadb', 'joe', 'root', 'root');
     $model = new \App\Model\SailorModel($connection);
@@ -31,26 +51,33 @@
     $query->where('rating', '>', $rating);
     $results = $query->getResults();
 
+        ?>
+            <table id="t01">
+                <tr>
+                    <th>sid</th>
+                    <th>sname</th>
+                    <th>rating</th>
+                </tr>
+                <?php
+                foreach($results as $item){
+                    ?>
+
+                    <tr>
+                        <td><?php echo $item['sid'] ?></td>
+                        <td><?php echo $item['sname'] ?></td>
+                        <td><?php echo $item['rating'] ?></td>
+                    </tr>
+                <?php
+                } ?>
+            </table>
+    <?php
+
 
     ?>
-    <table>
-        <tr>
-            <th>sid</th>
-            <th>sname</th>
-            <th>rating</th>
-        </tr>
-        <?php foreach ($results as $item) { ?>
-            <tr>
-            <td><?php echo $item['sid'] ?></td>
-            <td><?php echo $item['sname'] ?></td>
-            <td><?php echo $item['rating'] ?></td>
-        </tr>
-        <?php } ?>
-    </table>
 </form>
 <hr>
 
-<!--// second form-->
+<!--BEGIN WRITING QUERY TO FILTER SAILOR BY 'AGE'-->
     <form action="/" method="post">
         <table border="0">
 
@@ -72,18 +99,17 @@
 
         $rating = $_POST['rating'];
         $age = $_POST['age'];
-        $app = require __DIR__.'/../bootstrap/app.php';
 
         $connection = new \App\DB\Connector\Connection('mariadb', 'joe', 'root', 'root');
 
-        $newModel = new \App\Model\SailorModel($connection);
-        $query = $model->select(['sname', 'sid', 'age']);
+        $sailorModel = new \App\Model\SailorModel($connection);
+        $query = $sailorModel->select(['sname', 'sid', 'age']);
         $query->where('age', '>', $age);
         $results = $query->getResults();
 
 
         ?>
-        <table>
+        <table id="t01">
                     <tr>
                         <th>sid   </th>
                         <th>sname   </th>
@@ -99,8 +125,8 @@
         </table>
 
 </form>
-
-<!--Third form-->
+<!---->
+<!--<!--FILER BY BOAT COLOR-->
 <!--<hr>-->
 <!--<form action="/" method="post">-->
 <!--    <table border="0">-->
@@ -119,21 +145,17 @@
 <!--    </table>-->
 <!---->
 <!---->
-<!--    --><?php
+<?php
 //
 //    $color = $_POST['color'];
-//    $app = require __DIR__.'/../bootstrap/app.php';
-//
 //    $connection = new \App\DB\Connector\Connection('mariadb', 'joe', 'root', 'root');
-//
-//    $newModel = new \App\Model\BoatModel($connection);
-//    $query = $model->select(['bid', 'bname', 'color']);
+//    $boatModel = new \App\Model\BoatModel($connection);
+//    $query = $boatModel->select(['bid', 'bname', 'color']);
 //    $query->where('color', '==', $color);
 //    $results = $query->getResults();
 //
-//
-//    ?>
-<!--    <table>-->
+//?>
+<!--    <table id="t01">-->
 <!--        <tr>-->
 <!--            <th>bid   </th>-->
 <!--            <th>bname   </th>-->

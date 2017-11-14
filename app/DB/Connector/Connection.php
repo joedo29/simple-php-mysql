@@ -67,6 +67,14 @@ class Connection
         return $resultSet;
     }
 
+    /**
+     * @param string $query
+     */
+    public function exec(string $query)
+    {
+        $this->conn->exec($query);
+    }
+
     public function close()
     {
         $this->statement = null;
