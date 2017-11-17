@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b7d796f-fb2e-47b2-a45d-c29abe458dce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/DB/AbstractModel.php" afterPath="$PROJECT_DIR$/app/DB/AbstractModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/DB/Connector/Connection.php" afterPath="$PROJECT_DIR$/app/DB/Connector/Connection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/DB/Grammar/AbstractBuilder.php" afterPath="$PROJECT_DIR$/app/DB/Grammar/AbstractBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/DB/Grammar/Condition.php" afterPath="$PROJECT_DIR$/app/DB/Grammar/Condition.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/DB/Grammar/InsertBuilder.php" afterPath="$PROJECT_DIR$/app/DB/Grammar/InsertBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/BoatModel.php" afterPath="$PROJECT_DIR$/app/Model/BoatModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
-    </list>
+    <list default="true" id="7b7d796f-fb2e-47b2-a45d-c29abe458dce" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +51,7 @@
       <file leaf-file-name="AbstractModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/DB/AbstractModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="-714">
               <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
               <folding>
                 <element signature="e#26#58#0#PHP" expanded="true" />
@@ -92,17 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Connection.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/DB/Connector/Connection.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="65" column="7" lean-forward="false" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoatModel.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BoatModel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Model/BoatModel.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -112,14 +92,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1072">
+            <state relative-caret-position="-111">
               <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
               <folding>
                 <element signature="e#4221#4223#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestCase.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -430,7 +420,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -453,20 +442,6 @@
               <item name="simple-php-mysql" type="b2602c69:ProjectViewProjectNode" />
               <item name="simple-php-mysql" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DB" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Connector" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="simple-php-mysql" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple-php-mysql" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DB" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Grammar" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="simple-php-mysql" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple-php-mysql" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -474,10 +449,16 @@
               <item name="simple-php-mysql" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="simple-php-mysql" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-php-mysql" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -575,6 +556,7 @@
       <workItem from="1509098831090" duration="15333000" />
       <workItem from="1509288024706" duration="7854000" />
       <workItem from="1510207565445" duration="1410000" />
+      <workItem from="1510862432629" duration="989000" />
     </task>
     <task id="LOCAL-00001" summary="Finish Test including Test">
       <created>1503643202336</created>
@@ -640,12 +622,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91025000" />
+    <option name="totallyTimeSpent" value="92014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="49" width="1399" height="1001" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24170965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24539424" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40662253" sideWeight="0.39957112" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23139277" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -723,7 +706,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
     <entry file="das://table:/d5d8aa55/605a09dc-570c-4e45-b816-d0c3fa953336/evently_db.public.transactions_histories" />
     <entry file="das://table:/d5d8aa55/605a09dc-570c-4e45-b816-d0c3fa953336/evently_db.public.accounts" />
     <entry file="das://table:/d5d8aa55/605a09dc-570c-4e45-b816-d0c3fa953336/evently_db.public.accounts" />
@@ -826,16 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/DB/AbstractModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-          <folding>
-            <element signature="e#26#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/DB/Grammar/SelectBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -872,6 +844,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="e#4221#4223#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/DB/AbstractModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714">
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding>
+            <element signature="e#26#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/SailorModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -885,16 +885,6 @@
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1072">
-          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding>
-            <element signature="e#4221#4223#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
