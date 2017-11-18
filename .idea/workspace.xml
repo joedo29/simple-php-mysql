@@ -556,7 +556,7 @@
       <workItem from="1509098831090" duration="15333000" />
       <workItem from="1509288024706" duration="7854000" />
       <workItem from="1510207565445" duration="1410000" />
-      <workItem from="1510862432629" duration="989000" />
+      <workItem from="1510862432629" duration="1969000" />
     </task>
     <task id="LOCAL-00001" summary="Finish Test including Test">
       <created>1503643202336</created>
@@ -622,13 +622,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92014000" />
+    <option name="totallyTimeSpent" value="92994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="49" width="1399" height="1001" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24539424" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24539424" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40662253" sideWeight="0.39957112" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23139277" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
