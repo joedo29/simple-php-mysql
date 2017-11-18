@@ -45,8 +45,9 @@ class Condition
         $condition = '%s %s "%s"';
         if(is_numeric($this->value))
             $condition = '%s %s %s';
-        if (in_array($this->operator, self::IN_CONDITION)) {
-            $this->value = sprintf('(%s)', explode(',', $this->value));
+        if (in_array(strtolower($this->operator), self::IN_CONDITION)) {
+            $condition = '%s %s %s';
+            $this->value = sprintf('("%s")', implode('","', $this->value));
         }
         $condition = sprintf($condition, $this->column, $this->operator, $this->value);
         return $condition;

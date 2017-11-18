@@ -12,7 +12,6 @@ use App\DB\AbstractModel;
  */
 class BoatModel extends AbstractModel
 {
-    protected $table;
 
     public function getTable(): string
     {

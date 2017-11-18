@@ -39,12 +39,4 @@ class InsertBuilder extends AbstractBuilder
 
         return sprintf($query, $this->table, $column, $value);
     }
-
-    /**
-     * Execute Insert Query
-     */
-    public function execute()
-    {
-        $this->getResults();
-    }
 }

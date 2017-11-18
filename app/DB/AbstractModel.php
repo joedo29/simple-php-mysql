@@ -24,11 +24,6 @@ abstract class AbstractModel
     private $attributes = [];
 
     /**
-     * @var string
-     */
-    protected $table;
-
-    /**
      * AbstractModel constructor.
      * @param Connection $connection
      */
@@ -79,7 +74,7 @@ abstract class AbstractModel
      */
     public function insert(array $data)
     {
-        $insert = new InsertBuilder($this->connection, $this->table);
+        $insert = new InsertBuilder($this->connection, $this->getTable());
         $insert->insert($data);
         $insert->execute();
     }

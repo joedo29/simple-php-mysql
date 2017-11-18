@@ -1,0 +1,4 @@
+	4	5	25.00	1	damaged
+	3	3	70.00	1	used
+	2	4	65.00	1	like new
+	1	9	30.00	1	never used
