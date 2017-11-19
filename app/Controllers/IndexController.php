@@ -20,6 +20,10 @@ class IndexController
         }
         if ($data['action'] === 'addBook')
             return $this->addBook($data);
+
+        if ($data['action'] === 'search') {
+            return $this->searchBook($data);
+        }
     }
 
     public function signup($data) //Result Users
@@ -98,19 +102,18 @@ class IndexController
     public function searchBook($data)
     {
         unset($data['action']);
-        if(array_filter($data)){
-            $isbn13 = $data['isbn13'];
-            $isbn10 = $data['isbn10'];
-            $title = $data['title'];
-            $author = $data['author'];
-            $publisher = $data['publisher'];
-            $year = $data['year'];
-            $subject = $data['subject'];
+        //$data = ['action' => 'search', 'title' => 'search me', 'author' => ""] => ['title' => 'search me']
 
-            // call procedure
-            $procedure = new ProcedureBuilder(($this->connection));
-            $procedure->call('sp_searchBook', [$isbn13, $isbn10, $title, $author, $publisher, $year, $subject]);
-            return $this->listSearchBook();
+        if (array_filter($data)) {//['column' => 'search_value','column1' => 'search_value','column2' => 'search_value',]
+            $model = new BookModel($this->connection);
+
+            $query = $model->select(['book_id', 'isbn_13', 'isbn_10', 'title', 'author', 'publisher', 'year_published', 'book_subject']);
+            $query->where('title', 'LIKE', sprintf('%%%s%%', $data['title']));
+            unset($data['title']);
+            $query->where(array_filter($data));
+            $results = $query->getResults();
+
+            return $results;
         }
     }
 }
