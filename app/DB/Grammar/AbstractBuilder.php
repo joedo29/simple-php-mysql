@@ -44,7 +44,7 @@ abstract class AbstractBuilder
      * @param Connection $connection
      * @param $table
      */
-    public function __construct(Connection $connection, $table)
+    public function __construct(Connection $connection, $table = null)
     {
         $this->table = $table;
         $this->connection = $connection;
@@ -113,7 +113,7 @@ abstract class AbstractBuilder
      */
     public function execute()
     {
-        $this->connection->exec($this->getQuery());
+        $this->connection->execute($this->getQuery());
     }
 
     /**
