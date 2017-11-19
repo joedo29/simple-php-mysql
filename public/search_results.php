@@ -28,18 +28,7 @@
 <body style ="navbutton_background_color: powderblue;">
 <!--<img src="logo.png" style="width:128px;height:128px;">-->
 <center><h1> Search Results </h1></center>
-<?php
-$app = require __DIR__.'/../bootstrap/app.php';
 
-$search = $_POST['searchBook'];
-
-$connection = new \App\DB\Connector\Connection('mariadb', 'joe', 'root', 'root');
-$model = new \App\Model\BookModel($connection);
-$query = $model->select(['book_id', 'isbn_13', 'isbn_10', 'title', 'author', 'publisher', 'year_published', 'book_subject']);
-$query->where('title', '==', $search);
-$results = $query->getResults();
-
-?>
 <table id="t01">
     <tr>
         <th>book_id</th>

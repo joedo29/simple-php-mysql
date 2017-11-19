@@ -23,21 +23,19 @@
             background-color: black;
             color: white;
         }
+        table#t10 {
+            width: 25%;
+            border: 1px solid lightblue;
+            border-collapse: collapse;
+            background-color: powderblue;
+        }
     </style>
 </head>
 <body style ="navbutton_background_color: powderblue;">
 <div style="text-align: center;"><h1> List of Books </h1></div>
 
     <?php
-    $app = require __DIR__.'/../bootstrap/app.php';
-
-//    $rating = $_POST['rating'];
-
-    $connection = new \App\DB\Connector\Connection('mariadb', 'joe', 'root', 'root');
-    $model = new \App\Model\BookModel($connection);
-    $query = $model->select(['book_id', 'isbn_13', 'isbn_10', 'title', 'author', 'publisher', 'year_published', 'book_subject']);
-//    $query->where('rating', '>', $rating);
-    $results = $query->getResults();
+    //$ressults
 
     ?>
     <table id="t01">
@@ -70,18 +68,28 @@
         } ?>
     </table>
 <hr>
-    <form method="post" action="/">
+    <form method="get" action="/">
         <table border="0" id="t10">
             <h3> SEARCH FOR A BOOK </h3>
             <tr>
+                <td>ISBN_13</td>
+                <td align="center"><input type="text" name="isbn_13" size="30" placeholder="Search by isbn_13"/></td>
+
+            <tr>
+            <tr>
+                <td>AUTHOR</td>
+                <td align="center"><input type="text" name="author" size="30" placeholder="Search by Author"/></td>
+
+            <tr>
+            <tr>
                 <td>BOOK TITLE</td>
-                <td align="center"><input type="text" name="isbn13" size="30" placeholder="Enter your value here"/></td>
+                <td align="center"><input type="text" name="title" size="30" placeholder="Search by Title"/></td>
 
             <tr>
                 <td colspan="2" align="center"><input type="submit" value="Search"/></td>
             </tr>
         </table>
-        <input type="hidden" name="action" value="searchBook"/>
+        <input type="hidden" name="action" value="search"/>
     </form>
 
 </body>

@@ -7,16 +7,13 @@ $action = $data['action'];
 if (!$data['action']) {
     include 'users.php';
 }
-
+//$data = ['title' => 'huhed', 'action' => 'search']
 $results = $controller->handle($data);
 if ($action === 'signup') {
     include 'list_users.php';
     return;
 }
-if ($action === 'addBook')
+if (in_array($action, ['addBook', 'search']))
     include 'list_books.php';
 
-if($action ==='searchBook'){
-    include 'search_results.php';
-}
 ?>

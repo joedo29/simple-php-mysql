@@ -594,7 +594,6 @@
       </interpreter>
     </phpInfoCache>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7" />
   <component name="PhpUnit">
     <phpunit_settings>
       <phpunit_by_interpreter interpreter_id="7cb3f8d8-6019-4a72-8de9-50b2a6f7c7ab" load_method="CUSTOM_LOADER" custom_loader_path="/var/www/html/apiapps/vendor/autoload.php" phpunit_phar_path="" />
