@@ -52,7 +52,6 @@
         <?php
         foreach($results as $item){
             ?>
-
             <tr>
                 <td><?php echo $item['book_id'] ?></td>
                 <td><?php echo $item['isbn_13'] ?></td>
@@ -62,6 +61,7 @@
                 <td><?php echo $item['publisher'] ?></td>
                 <td><?php echo $item['year_published'] ?></td>
                 <td><?php echo $item['book_subject'] ?></td>
+                <td><a href="/?action=delete&book_id=<?php echo $item['book_id'] ?>">Delete</a></td>
 
             </tr>
             <?php

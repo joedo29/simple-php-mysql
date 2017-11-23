@@ -1,6 +1,4 @@
-# Update something important
-
-**NOTE:** You are free to use any framework you wish. Bonus points for an explanation of your choice.
+**NOTE:** You are free to use any framework you wish.
 
 1. Command line: `docker-compose build`
 

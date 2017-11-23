@@ -13,7 +13,7 @@ if ($action === 'signup') {
     include 'list_users.php';
     return;
 }
-if (in_array($action, ['addBook', 'search']))
+if (in_array($action, ['addBook', 'search', 'delete']))
     include 'list_books.php';
 
 ?>

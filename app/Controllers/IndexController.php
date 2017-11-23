@@ -24,6 +24,9 @@ class IndexController
         if ($data['action'] === 'search') {
             return $this->searchBook($data);
         }
+        if ($data['action'] === 'delete'){
+            return $this->deleteBook($data);
+        }
     }
 
     public function signup($data) //Result Users
@@ -81,7 +84,6 @@ class IndexController
             $publisher = $data['publisher'];
             $year = $data['year'];
             $subject = $data['subject'];
-//        $price = $data['price'];
 
             // call procedure
             $procedure = new ProcedureBuilder($this->connection);
@@ -115,5 +117,18 @@ class IndexController
 
             return $results;
         }
+    }
+
+    public function deleteBook($data){
+        unset($data['action']);
+        if(array_filter($data)){
+            $model = new BookModel($this->connection);
+            var_dump($data);
+            $query = $model->delete($data);
+            $results = $query->getResults();
+
+            return $results;
+        }
+
     }
 }
