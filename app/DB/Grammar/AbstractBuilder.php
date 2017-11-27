@@ -44,24 +44,31 @@ abstract class AbstractBuilder
      * @param Connection $connection
      * @param $table
      */
-    public function __construct(Connection $connection, $table)
+    public function __construct(Connection $connection, $table = null)
     {
         $this->table = $table;
         $this->connection = $connection;
     }
 
     /**
+     * ['title' => 'me', 'author' => 'Paul]
      * @param $column
      * @param $operator
      * @param $value
      */
-    public function where($column, $operator, $value = null)
+    public function where($columns, $operator = null, $value = null)
     {
-        if (!$value) {
+        if (is_array($columns)) {
+            foreach ($columns as $key => $value) {
+                $this->where($key, $value);//$this->where($key, '=', $value)
+            }
+            return;
+        }
+        if (!$value) {//In case we receive 2 params: 1st is column, 2nd($operator) is value
             $value = $operator;
             $operator = '=';
         }
-        $this->conditions[] = new Condition($column, $operator, $value);
+        $this->conditions[] = new Condition($columns, $operator, $value);
     }
 
     /**
@@ -104,7 +111,7 @@ abstract class AbstractBuilder
      */
     public function getResults()
     {
-       // print_r($this->getQuery());
+//         print_r($this->getQuery());
         return $this->connection->query($this->getQuery());
     }
 
@@ -113,7 +120,7 @@ abstract class AbstractBuilder
      */
     public function execute()
     {
-        $this->connection->exec($this->getQuery());
+        $this->connection->execute($this->getQuery());
     }
 
     /**

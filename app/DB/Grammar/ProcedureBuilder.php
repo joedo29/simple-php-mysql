@@ -10,7 +10,7 @@ use App\DB\Connector\Connection;
  */
 class ProcedureBuilder extends AbstractBuilder
 {
-    const COMMAND_PROCEDURE = 'call %(%s)';
+    const COMMAND_PROCEDURE = 'call %s(%s)';
 
     /**
      * @var array
@@ -27,9 +27,9 @@ class ProcedureBuilder extends AbstractBuilder
      * @param Connection $connection
      * @param $table
      */
-    public function __construct(Connection $connection, $table)
+    public function __construct(Connection $connection)
     {
-        parent::__construct($connection, $table);
+        parent::__construct($connection);
     }
 
     /**
@@ -37,7 +37,7 @@ class ProcedureBuilder extends AbstractBuilder
      * @param array $data
      * @return $this
      */
-    public function update(string $procedure, array $data)
+    public function call(string $procedure, array $data)
     {
         $this->procedure = $procedure;
         $values = [];
@@ -47,7 +47,7 @@ class ProcedureBuilder extends AbstractBuilder
 
         $this->data = $values;
 
-        $this->getResults();
+        $this->execute();
 
         return $this;
     }

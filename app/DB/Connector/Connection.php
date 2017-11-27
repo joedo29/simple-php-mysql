@@ -67,6 +67,18 @@ class Connection
         return $resultSet;
     }
 
+
+    /**
+     * @param string $query
+     * @return array
+     */
+    public function execute(string $query)
+    {
+        $this->connect();
+        $this->statement = $this->conn->prepare($query);
+        $this->statement->execute();
+    }
+
     /**
      * @param string $query
      */
