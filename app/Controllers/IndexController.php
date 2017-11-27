@@ -126,6 +126,7 @@ class IndexController
             $model = new BookModel($this->connection);
             $model->delete($data);
         }
+        return $this->listBooks();
 
     }
 }
