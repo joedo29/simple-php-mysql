@@ -24,7 +24,7 @@ class IndexController
         if ($data['action'] === 'search') {
             return $this->searchBook($data);
         }
-        if ($data['action'] === 'delete'){
+        if ($data['action'] === 'delete') {
             return $this->deleteBook($data);
         }
     }
@@ -119,15 +119,12 @@ class IndexController
         }
     }
 
-    public function deleteBook($data){
+    public function deleteBook($data)
+    {
         unset($data['action']);
-        if(array_filter($data)){
+        if (array_filter($data)) {
             $model = new BookModel($this->connection);
-            var_dump($data);
-            $query = $model->delete($data);
-            $results = $query->getResults();
-
-            return $results;
+            $model->delete($data);
         }
 
     }

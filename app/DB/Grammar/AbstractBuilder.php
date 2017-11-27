@@ -107,12 +107,13 @@ abstract class AbstractBuilder
     }
 
     /**
+     * @param bool $fetch
      * @return array
      */
-    public function getResults()
+    public function getResults($fetch = true)
     {
 //         print_r($this->getQuery());
-        return $this->connection->query($this->getQuery());
+        return $this->connection->query($this->getQuery(), $fetch);
     }
 
     /**

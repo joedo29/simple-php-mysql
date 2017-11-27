@@ -65,10 +65,11 @@ abstract class AbstractModel
         $deleting = new CommandBuilder($this->connection, $this->getTable());
         $deleting->delete($data);
 
-        return $deleting;
+        $deleting->execute();
     }
 
     abstract public function getTable(): string;
+
     /**
      * @param array $data
      */
