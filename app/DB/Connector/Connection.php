@@ -55,16 +55,20 @@ class Connection
 
     /**
      * @param string $query
+     * @param bool $fetch
      * @return array
      */
-    public function query(string $query)
+    public function query(string $query, $fetch = true)
     {
         $this->connect();
         $this->statement = $this->conn->prepare($query);
         $this->statement->setFetchMode(\PDO::FETCH_ASSOC);
         $this->statement->execute();
-        $resultSet = $this->statement->fetchAll();
-        return $resultSet;
+        if ($fetch) {
+            $resultSet = $this->statement->fetchAll();
+            return $resultSet;
+        }
+        return;
     }
 
 
