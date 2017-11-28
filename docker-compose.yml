@@ -1,0 +1,59 @@
+version: '2'
+networks:
+    database:
+        driver: bridge
+    backend:
+        driver: bridge
+services:
+    sources:
+      build: images/sources
+      volumes:
+        - .:/var/www/html/apiapps
+
+    database:
+      build: images/sources
+
+    php:
+        extends:
+            file: php-compose.yml
+            service: application
+        volumes_from:
+          - sources
+        entrypoint: "/run.sh"
+        ports:
+            - "2222:22"
+        links:
+            - mariadb
+        networks:
+            - database
+            - backend
+
+    mariadb:
+        image: mariadb:latest
+        ports:
+            - "3308:3306"
+        volumes_from:
+            - sources
+        networks:
+            - database
+        environment:
+          - MYSQL_ROOT_PASSWORD=root
+          - MYSQL_USER=joe
+          - MYSQL_DATABASE=joe
+          - MYSQL_PASSWORD=joe
+
+    lumen.local:
+        build: images/nginx
+        networks:
+            - backend
+        volumes_from:
+            - sources
+            - php
+        command: nginx -g "daemon off;"
+        links:
+            - php
+            - sources
+        ports:
+            - "88:88"
+        environment:
+            NGINX_HOST: lumen.local
