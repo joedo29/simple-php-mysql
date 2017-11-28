@@ -1,0 +1,11 @@
+	Beverly	admin	beverly@hotmail.com	redmond	wa	2066437890	980052	2017-01-10	1
+	Joe	test	joe@hotmail.com	redmond	wa	4251233456	980052	2017-02-11	0
+	Ferdinand	test	ferdinand@hotmail.com	west seattle	wa	2064321234	98116	2017-03-12	0
+	Shaila	test	shaila@hotmail.com	west seattle	wa	2066437812	98116	2017-04-13	0
+	Kim	test	kim@hotmail.com	bellevue	wa	2066437823	98008	2017-05-14	0
+	Teresa	test	teresa@hotmail.com	west seattle	wa	2066437834	98116	2017-06-15	0
+	Cardi	test	cardi@hotmail.com	bellevue	wa	2066437845	98004	2017-07-16	0
+	Elene	test	elene@hotmail.com	bellevue	wa	2066437856	98004	2017-08-17	0
+	Patrick	test	patrick@hotmail.com	salt lake city	ut	2066437867	84101	2017-09-18	0
+	Zaina	test	zaina@hotmail.com	los angeles	ca	2066437878	90001	2017-10-19	0
+	Franklin 	test	Franckin@hotmail.com 	Issaquah 	wa	2067783749	98087	2017-11-20	0

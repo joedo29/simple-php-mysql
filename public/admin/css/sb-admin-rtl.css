@@ -1,0 +1,18 @@
+
+@media (min-width: 768px){
+  #wrapper {padding-right: 225px; padding-left: 0;}
+  .side-nav{right: 0;left: auto;}
+};
+
+
+.navbar-default {
+  background-color: #F8F8F8;
+  border-color: #E7E7E7;
+};
+.navbar-default .navbar-nav > li > a {
+  color: #777777;
+};
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background-color: #E7E7E7;
+  color: #555555;
+};
